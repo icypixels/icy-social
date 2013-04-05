@@ -1,0 +1,215 @@
+@font-face {
+	font-family: 'zocial';
+	font-style: normal;
+	font-weight: normal;
+	src: url('zocial-regular-webfont.eot');
+	src: url('zocial-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('zocial-regular-webfont.woff') format('woff'),
+		url('zocial-regular-webfont.ttf') format('truetype'),
+		url('zocial-regular-webfont.svg#ZocialRegular') format('svg');
+}
+
+.icy-social-wrapper {
+	float: left;
+	line-height: 0;
+}
+
+.icy-social,
+a.icy-social {
+	color: #999;
+	cursor: pointer;
+	display: inline-block;
+	font: bold 100%/2.1 Tahoma, sans-serif;
+	padding: 0 .95em 0 0;
+	text-align: center;
+	text-decoration: none;		
+	position: relative;
+	z-index: 100;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.icy-social:before {
+	content: "";	
+	float: left;
+	font: 130%/1.65 'zocial';
+	font-style: normal;
+	font-weight: normal;	
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+}
+
+.icy-social:active {
+	outline: none;
+}
+
+.icy-social.icon {
+	overflow: hidden;
+	max-width: 2.4em;
+	padding-left: 0;
+	padding-right: 0;
+	max-height: 2.05em;
+}
+.icy-social.icon:before {
+	padding: 0;
+	width: 2em;
+	height: 2em;
+	
+	box-shadow: none;
+	border: none;
+}
+
+.icy-social.amazon:before {content: "\E040";}
+.icy-social.android:before {content: "\E005";}
+.icy-social.aol:before {content: "\E001";}
+.icy-social.appstore:before {content: "\E020";}
+.icy-social.bitcoin:before {content: "\E011"; }
+.icy-social.blogger:before {content: "\E021";}
+.icy-social.call:before {content: "\E016";}
+.icy-social.cal:before {content: "\E00D";}
+.icy-social.chrome:before {content: "\E03A";}
+.icy-social.cloudapp:before {content: "\E042";}
+.icy-social.creativecommons:before {content: "\E022";}
+.icy-social.disqus:before {content: "\E030";}
+.icy-social.dribbble:before {content: "\E023";}
+.icy-social.dropbox:before {content: "\E043"; }
+.icy-social.email:before {content: "\E03C"; }
+.icy-social.eventasaurus:before {content: "\E055"; }
+.icy-social.eventbrite:before {content: "\E05B";}
+.icy-social.eventful:before {content: "\E006"; }
+.icy-social.evernote:before {content: "\E024";}
+.icy-social.facebook:before {content: "\E045";}
+.icy-social.fivehundredpx:before {content: "\E00F"; }
+.icy-social.flattr:before {content: "\E004";}
+.icy-social.forrst:before {content: "\E019"; color: }
+.icy-social.foursquare:before {content: "\E013";}
+.icy-social.github:before {content: "\E046";}
+.icy-social.gmail:before {content: "\E04C"; }
+.icy-social.google:before {content: "\E026";}
+.icy-social.googleplus:before {content: "\E00A";}
+.icy-social.gowalla:before {content: "\E01F";}
+.icy-social.grooveshark:before {content: "\E017";}
+.icy-social.guest:before {content: "\E01E";}
+.icy-social.html5:before {content: "\E014";}
+.icy-social.ie:before {content: "\E015";}
+.icy-social.instapaper:before {content: "\E028";}
+.icy-social.intensedebate:before {content: "\E05A";}
+.icy-social.itunes:before {content: "\E048";}
+.icy-social.klout:before {content: "\E02A"; }
+.icy-social.lanyrd:before {content: "\E00C";}
+.icy-social.lastfm:before {content: "\E04B";}
+.icy-social.linkedin:before {content: "\E02B";}
+.icy-social.macstore:before {content: "\E03D";}
+.icy-social.meetup:before {content: "\E02C";}
+.icy-social.myspace:before {content: "\E03E";}
+.icy-social.ninetyninedesigns:before {content: "\E018"; }
+.icy-social.openid:before {content: "\E04E";}
+.icy-social.paypal:before {content: "\E003";}
+.icy-social.pinboard:before {content: "\E04D";}
+.icy-social.pinterest:before {content: "\E010";}
+.icy-social.plancast:before {content: "\E02F";}
+.icy-social.plurk:before {content: "\E049";}
+.icy-social.podcast:before {content: "\E03F";}
+.icy-social.posterous:before {content: "\E05D";}
+.icy-social.quora:before {content: "\E050";}
+.icy-social.rss:before {content: "\E031";}
+.icy-social.scribd:before {content: "\E05C";}
+.icy-social.skype:before {content: "\E032";}
+.icy-social.smashing:before {content: "\E009";}
+.icy-social.songkick:before {content: "\E04A";}
+.icy-social.soundcloud:before {content: "\E052";}
+.icy-social.spotify:before {content: "\E01C";}
+.icy-social.stumbleupon:before {content: "\E00E";}
+.icy-social.tumblr:before {content: "\E053";}
+.icy-social.twitter:before {content: "\E033";}
+.icy-social.viadeo:before {content: "\E027";}
+.icy-social.vimeo:before {content: "\E035";}
+.icy-social.weibo:before {content: "\E029";}
+.icy-social.wikipedia:before {content: "\E00B";}
+.icy-social.windows:before {content: "\E036";}
+.icy-social.xing:before {content: "\E037"}
+.icy-social.wordpress:before {content: "\E056";}
+.icy-social.yahoo:before {content: "\E038";}
+.icy-social.yelp:before {content: "\E058";}
+.icy-social.youtube:before {content: "\E034";}
+
+.icy-social.amazon:hover {color: #ffad1d;}
+.icy-social.android:hover {color: #a4c639;}
+.icy-social.aol:hover {color: #f00;}
+.icy-social.appstore:hover {color: #000;}
+.icy-social.bitcoin:hover {color: #efefef;}
+.icy-social.blogger:hover {color: #ee5a22;}
+.icy-social.call:hover {color: #008000;}
+.icy-social.cal:hover {color: #d63538;}
+.icy-social.chrome:hover {color: #006cd4;}
+.icy-social.cloudapp:hover {color: #fff; }
+.icy-social.creativecommons:hover {color: #000;}
+.icy-social.disqus:hover {color: #5d8aad;}
+.icy-social.dribbble:hover {color: #ea4c89;}
+.icy-social.dropbox:hover {color: #fff; }
+.icy-social.email:hover {color: #f0f0eb; }
+.icy-social.eventasaurus:hover {color: #192931;}
+.icy-social.eventbrite:hover {color: #ff5616;}
+.icy-social.eventful:hover {color: #fff; }
+.icy-social.evernote:hover {color: #6bb130; }
+.icy-social.facebook:hover {color: #3b5998;}
+.icy-social.fivehundredpx:hover {color: #333;}
+.icy-social.flattr:hover {color: #8aba42;}
+.icy-social.forrst:hover {color: #1e360d;}
+.icy-social.foursquare:hover {color: #25a0ca;}
+.icy-social.github:hover {color: #fbfbfb; }
+.icy-social.gmail:hover {color: #efefef;}
+.icy-social.google:hover {color: #4e6cf7;}
+.icy-social.googleplus:hover {color: #db4a39;}
+.icy-social.gowalla:hover {color: #ff720a;}
+.icy-social.grooveshark:hover {color: #111;}
+.icy-social.guest:hover {color: #1b4d6d;}
+.icy-social.html5:hover {color: #ec6231;}
+.icy-social.ie:hover {color: #00a1d9;}
+.icy-social.instapaper:hover {color: #eee;}
+.icy-social.intensedebate:hover {color: #0099e1;}
+.icy-social.klout:hover {color: #e34a25;}
+.icy-social.itunes:hover {color: #efefeb; }
+.icy-social.lanyrd:hover {color: #2e6ac2;}
+.icy-social.lastfm:hover {color: #c3000d;}
+.icy-social.linkedin:hover {color: #0083a8;}
+.icy-social.macstore:hover {color: #007dcb}
+.icy-social.meetup:hover {color: #ff0026;}
+.icy-social.myspace:hover {color: #000;}
+.icy-social.ninetyninedesigns:hover {color: #fff; }
+.icy-social.openid:hover {color: #f5f5f5; }
+.icy-social.paypal:hover {color: #1e477a; }
+.icy-social.pinboard:hover {color: blue;}
+.icy-social.pinterest:hover {color: #c91618;}
+.icy-social.plancast:hover {color: #e7ebed; }
+.icy-social.plurk:hover {color: #cf682f;}
+.icy-social.podcast:hover {color: #9365ce;}
+.icy-social.posterous:hover {color: #ffd959;}
+.icy-social.quora:hover {color: #a82400;}
+.icy-social.rss:hover {color: #ee802f;}
+.icy-social.scribd:hover {color: #231c1a;}
+.icy-social.skype:hover {color: #00aff0;}
+.icy-social.smashing:hover {color: #ff4f27;}
+.icy-social.songkick:hover {color: #ff0050;}
+.icy-social.soundcloud:hover {color: #ff4500;}
+.icy-social.spotify:hover {color: #81b71a;}
+.icy-social.stumbleupon:hover {color: #eb4924;}
+.icy-social.tumblr:hover {color: #374a61;}
+.icy-social.twitter:hover {color: #00a0d1;}
+.icy-social.viadeo:hover {color: #fff; }
+.icy-social.vimeo:hover {color: #86c9ef;}
+.icy-social.weibo:hover {color: #faf6f1; }
+.icy-social.wikipedia:hover {color: #fff; }
+.icy-social.windows:hover {color: #0052a4; }
+.icy-social.wordpress:hover {color: #464646;}
+.icy-social.xing:hover {color: #0A5D5E;}
+.icy-social.yahoo:hover {color: #a200c2;}
+.icy-social.yelp:hover {color: #e60010;}
+.icy-social.youtube:hover {color: #f00;}
+
+button::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
