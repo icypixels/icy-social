@@ -2,6 +2,7 @@
 /*
 Plugin Name: Icy Social
 Plugin Script: icy-social.php
+Plugin URI: http://www.icypixels.com/icy-social/
 Description: A simple and handy social icons set which can be used by shortcode. Brought to you by <a href="http://www.icypixels.com" title="Icy Pixels WordPress Themes">Icy Pixels</a> (<a href="http://twitter.com/theicypixels/">Twitter</a> | <a href="https://www.facebook.com/pages/Icy-Pixels/170508899756996">Facebook</a>). 
 Version: 1.0
 License: GPL 3.0
@@ -100,6 +101,7 @@ class IcySocial {
         add_shortcode('icy_social', array(&$this, 'shortcode'));
         add_action('widgets_init', create_function('', 'register_widget("IcySocial_Widget");'));
         add_action('wp_enqueue_scripts', array(&$this, 'icy_register_styles'));
+        add_action('admin_enqueue_scripts', array(&$this, 'icy_register_styles'));
 	}
 
 	function icy_register_styles() {
@@ -211,11 +213,11 @@ class IcySocial {
 	{
 		global $icy_social;
 		extract( shortcode_atts( array(			
-			'sites' => ''
+			'services' => ''
 		), $atts ) );
 
 		$services_wl = array();
-		if($services) $services_wl = explode(',', str_replace(' ', '', esc_attr($sites)));
+		if($services) $services_wl = explode(',', str_replace(' ', '', esc_attr($services)));
 		return $this->do_social($services_wl);
 	}
 	
