@@ -31,12 +31,13 @@ a.icy-social {
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
+	margin-left: -3px;
 }
 
 .icy-social:before {
 	content: "";
 	float: left;
-	font: 120%/1.65 zocial;
+	font: 130%/1.65 zocial;
 	font-style: normal;
 	font-weight: normal;
 	text-align: center;
@@ -53,7 +54,7 @@ a.icy-social {
 
 .icy-social.icon {
 	overflow: hidden;
-	max-width: 2.4em;
+	max-width: 2.45em;
 	padding-left: 0;
 	padding-right: 0;
 	max-height: 2.05em;
@@ -66,6 +67,8 @@ a.icy-social {
 	box-shadow: none;
 	border: none;
 }
+
+a.icy-social:hover { color: #fff; }
 
 .icy-social.acrobat:before {content: "\00E3"; color: #FB0000;}
 .icy-social.amazon:before {content: "a";}
