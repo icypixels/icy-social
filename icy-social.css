@@ -37,7 +37,7 @@ a.icy-social {
 .icy-social:before {
 	content: "";
 	float: left;
-	font: 130%/1.65 zocial;
+	font: 130%/1.5 zocial;
 	font-style: normal;
 	font-weight: normal;
 	text-align: center;
