@@ -30,8 +30,7 @@ a.icy-social {
 	z-index: 100;
 	-moz-user-select: none;
 	-webkit-user-select: none;
-	user-select: none;
-	margin-left: -3px;
+	user-select: none;	
 }
 
 .icy-social:before {
