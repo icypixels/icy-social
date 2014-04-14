@@ -283,51 +283,52 @@ $icy_social = new IcySocial();
  * WordPress Widget
  *
  */
+if (!class_exists('IcySocial_Widget')) {
+	class IcySocial_Widget extends WP_Widget {
 
-class IcySocial_Widget extends WP_Widget {
+		function __construct() {
+			parent::WP_Widget( 'icy_social_widget', 'Icy Social', array( 'description' => 'Displays your Icy Social icons' ) );
+		}
 
-	function __construct() {
-		parent::WP_Widget( 'icy_social_widget', 'Icy Social', array( 'description' => 'Displays your Icy Social icons' ) );
-	}
+		function widget( $args, $instance ) {
+			extract( $args );
+			$title = apply_filters( 'widget_title', $instance['title'] );
+			$desc = $instance['description'];		
+			
+			echo $before_widget;
+			if ( !empty( $title ) ) echo $before_title . $title . $after_title;
+			
+			if( $desc ) echo '<p>'. $desc .'</p>';
+			
+			global $icy_social;
+			echo $icy_social->do_social();
+			
+			echo $after_widget;
+		}
 
-	function widget( $args, $instance ) {
-		extract( $args );
-		$title = apply_filters( 'widget_title', $instance['title'] );
-		$desc = $instance['description'];		
-		
-		echo $before_widget;
-		if ( !empty( $title ) ) echo $before_title . $title . $after_title;
-		
-		if( $desc ) echo '<p>'. $desc .'</p>';
-		
-		global $icy_social;
-		echo $icy_social->do_social();
-		
-		echo $after_widget;
-	}
+		function update( $new_instance, $old_instance ) {
+			$instance = $old_instance;
+			$instance['title'] = strip_tags($new_instance['title']);
+			$instance['description'] = strip_tags($new_instance['description'], '<a><b><strong><i><em>');		
+			return $instance;
+		}
 
-	function update( $new_instance, $old_instance ) {
-		$instance = $old_instance;
-		$instance['title'] = strip_tags($new_instance['title']);
-		$instance['description'] = strip_tags($new_instance['description'], '<a><b><strong><i><em>');		
-		return $instance;
-	}
-
-	function form( $instance ) {
-		if ( $instance && isset($instance['title']) ) $title = esc_attr( $instance['title'] );
-		else $title = '';
-		if ( $instance && isset($instance['description']) ) $desc = esc_attr( $instance['description'] );
-		else $desc = '';		
-		?>
-		<p>
-			<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
-		</p>
-		<p>
-			<label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Description:'); ?></label> 
-			<input class="widefat" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>" type="text" value="<?php echo $desc; ?>" />
-		</p>		
-		<?php 
+		function form( $instance ) {
+			if ( $instance && isset($instance['title']) ) $title = esc_attr( $instance['title'] );
+			else $title = '';
+			if ( $instance && isset($instance['description']) ) $desc = esc_attr( $instance['description'] );
+			else $desc = '';		
+			?>
+			<p>
+				<label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label> 
+				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+			</p>
+			<p>
+				<label for="<?php echo $this->get_field_id('description'); ?>"><?php _e('Description:'); ?></label> 
+				<input class="widefat" id="<?php echo $this->get_field_id('description'); ?>" name="<?php echo $this->get_field_name('description'); ?>" type="text" value="<?php echo $desc; ?>" />
+			</p>		
+			<?php 
+		}
 	}
 }
 
